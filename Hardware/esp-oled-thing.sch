@@ -14533,7 +14533,6 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <part name="D4" library="zetex" deviceset="D" device="SOD323" value="1n4148"/>
 <part name="GND19" library="SparkFun" deviceset="GND" device=""/>
 <part name="R18" library="rcl" deviceset="R-EU_" device="R0402" value="470E"/>
-<part name="R5" library="adafruit" deviceset="R-US_" device="M0805" value="0Ohm"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="SparkFun" deviceset="VCC" device=""/>
 <part name="D3" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY" device="-BAT20J" value="BAT20J"/>
@@ -14548,6 +14547,8 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <part name="SJ2" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
 <part name="SJ3" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
+<part name="SJ4" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
+<part name="GND15" library="SparkFun" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14684,10 +14685,6 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <attribute name="NAME" x="133.35" y="129.5146" size="1.778" layer="95"/>
 <attribute name="VALUE" x="132.588" y="122.936" size="1.778" layer="96"/>
 </instance>
-<instance part="R5" gate="G$1" x="228.6" y="104.14" smashed="yes" rot="R90">
-<attribute name="NAME" x="227.1014" y="100.33" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="226.822" y="105.41" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="GND1" gate="1" x="228.6" y="93.98"/>
 <instance part="P+1" gate="1" x="180.34" y="162.56"/>
 <instance part="D3" gate="G$1" x="259.08" y="76.2" smashed="yes" rot="R270">
@@ -14723,6 +14720,12 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <attribute name="NAME" x="233.68" y="101.6" size="1.778" layer="95" rot="R90"/>
 </instance>
 <instance part="GND7" gate="1" x="236.22" y="93.98"/>
+<instance part="SJ4" gate="1" x="15.24" y="116.84" smashed="yes" rot="R90">
+<attribute name="NAME" x="12.7" y="114.3" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="GND15" gate="1" x="15.24" y="106.68" smashed="yes">
+<attribute name="VALUE" x="12.7" y="104.14" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -14837,9 +14840,10 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <wire x1="132.08" y1="119.38" x2="132.08" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R5" gate="G$1" pin="1"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="228.6" y1="96.52" x2="228.6" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="111.76" x2="228.6" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GPIO15"/>
+<wire x1="228.6" y1="111.76" x2="228.6" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R12" gate="G$1" pin="1"/>
@@ -14855,6 +14859,11 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <pinref part="SJ3" gate="1" pin="1"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="236.22" y1="99.06" x2="236.22" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SJ4" gate="1" pin="1"/>
+<pinref part="GND15" gate="1" pin="GND"/>
+<wire x1="15.24" y1="109.22" x2="15.24" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -14898,14 +14907,7 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <pinref part="SJ3" gate="1" pin="2"/>
 <wire x1="228.6" y1="114.3" x2="236.22" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="236.22" y1="114.3" x2="236.22" y2="109.22" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<wire x1="223.52" y1="111.76" x2="228.6" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="GPIO15"/>
-<pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="228.6" y1="111.76" x2="228.6" y2="109.22" width="0.1524" layer="91"/>
+<junction x="228.6" y="114.3"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -15143,6 +15145,7 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <pinref part="R10" gate="G$1" pin="1"/>
 <junction x="25.4" y="121.92"/>
 <junction x="38.1" y="121.92"/>
+<pinref part="SJ4" gate="1" pin="2"/>
 </segment>
 </net>
 <net name="TPS_EN" class="0">
