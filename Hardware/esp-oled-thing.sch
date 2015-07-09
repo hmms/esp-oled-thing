@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14699,19 +14699,23 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <part name="Q1" library="SparkFun-DiscreteSemi" deviceset="MOSFET-PCHANNEL" device="DMG2307L" value="2.5A/30V"/>
 <part name="R12" library="adafruit" deviceset="R-US_" device="M0805" value="10K"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="SJ1" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
+<part name="CHARGER_STATUS" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
 <part name="R14" library="adafruit" deviceset="R-US_" device="M0805" value="4.7K"/>
 <part name="R15" library="adafruit" deviceset="R-US_" device="M0805" value="4.7K"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="R16" library="adafruit" deviceset="R-US_" device="M0805" value="10K"/>
-<part name="SJ2" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
-<part name="SJ3" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
+<part name="TPS_EN" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
+<part name="GPIO2_GND" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
-<part name="SJ4" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
+<part name="SMPS_GND" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
 <part name="GND15" library="SparkFun" deviceset="GND" device=""/>
 <part name="SJ5" library="jumper" deviceset="SJ2W" device=""/>
 <part name="S1" library="switch" deviceset="TL39PO" device=""/>
 <part name="P+5" library="SparkFun" deviceset="VCC" device=""/>
+<part name="GND" library="testpad" deviceset="TP" device="TP10R">
+<attribute name="TP_SIGNAL_NAME" value=""/>
+</part>
+<part name="GND16" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14731,8 +14735,10 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="139.7" y1="91.44" x2="116.84" y2="91.44" width="0.1524" layer="97"/>
 <text x="152.4" y="55.88" size="1.778" layer="97">Li-Po battery Charger Section</text>
 <text x="30.48" y="109.22" size="1.778" layer="97">The Power Supply Regulator for the System</text>
-<wire x1="2.54" y1="175.26" x2="139.7" y2="175.26" width="0.1524" layer="97"/>
+<wire x1="2.54" y1="175.26" x2="88.9" y2="175.26" width="0.1524" layer="97"/>
 <text x="114.3" y="-10.16" size="1.778" layer="97">Solder jumper for connecting vref to vcc</text>
+<wire x1="88.9" y1="175.26" x2="129.54" y2="175.26" width="0.1524" layer="97"/>
+<wire x1="129.54" y1="175.26" x2="139.7" y2="175.26" width="0.1524" layer="97"/>
 <wire x1="139.7" y1="104.14" x2="2.54" y2="104.14" width="0.1524" layer="97"/>
 <wire x1="142.24" y1="177.8" x2="142.24" y2="175.26" width="0.1524" layer="97"/>
 <wire x1="139.7" y1="144.78" x2="172.72" y2="144.78" width="0.1524" layer="97"/>
@@ -14747,6 +14753,15 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="226.06" y1="91.44" x2="139.7" y2="91.44" width="0.1524" layer="97"/>
 <wire x1="139.7" y1="91.44" x2="139.7" y2="104.14" width="0.1524" layer="97"/>
 <text x="233.68" y="86.36" size="1.778" layer="95">optional load sharing circuit</text>
+<wire x1="88.9" y1="175.26" x2="88.9" y2="152.4" width="0.1524" layer="97"/>
+<wire x1="88.9" y1="152.4" x2="129.54" y2="152.4" width="0.1524" layer="97"/>
+<wire x1="129.54" y1="152.4" x2="129.54" y2="175.26" width="0.1524" layer="97"/>
+<wire x1="27.94" y1="99.06" x2="27.94" y2="76.2" width="0.1524" layer="97"/>
+<wire x1="27.94" y1="76.2" x2="76.2" y2="76.2" width="0.1524" layer="97"/>
+<wire x1="76.2" y1="76.2" x2="76.2" y2="99.06" width="0.1524" layer="97"/>
+<wire x1="76.2" y1="99.06" x2="27.94" y2="99.06" width="0.1524" layer="97"/>
+<text x="40.64" y="96.52" size="1.778" layer="97">Power Switch</text>
+<text x="99.06" y="172.72" size="1.778" layer="97">Battery Connector</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -14860,7 +14875,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <attribute name="VALUE" x="236.982" y="74.93" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND3" gate="1" x="238.76" y="60.96"/>
-<instance part="SJ1" gate="1" x="170.18" y="111.76" smashed="yes">
+<instance part="CHARGER_STATUS" gate="1" x="170.18" y="111.76" smashed="yes">
 <attribute name="NAME" x="167.64" y="114.3" size="1.778" layer="95"/>
 </instance>
 <instance part="R14" gate="G$1" x="177.8" y="129.54" smashed="yes" rot="R90">
@@ -14876,14 +14891,14 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <attribute name="NAME" x="183.9214" y="148.59" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="183.642" y="153.67" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="SJ2" gate="1" x="238.76" y="121.92" smashed="yes">
+<instance part="TPS_EN" gate="1" x="238.76" y="121.92" smashed="yes">
 <attribute name="NAME" x="236.22" y="124.46" size="1.778" layer="95"/>
 </instance>
-<instance part="SJ3" gate="1" x="236.22" y="104.14" smashed="yes" rot="R90">
+<instance part="GPIO2_GND" gate="1" x="236.22" y="104.14" smashed="yes" rot="R90">
 <attribute name="NAME" x="233.68" y="101.6" size="1.778" layer="95" rot="R90"/>
 </instance>
 <instance part="GND7" gate="1" x="236.22" y="93.98"/>
-<instance part="SJ4" gate="1" x="15.24" y="116.84" smashed="yes" rot="R90">
+<instance part="SMPS_GND" gate="1" x="15.24" y="116.84" smashed="yes" rot="R90">
 <attribute name="NAME" x="12.7" y="114.3" size="1.778" layer="95" rot="R90"/>
 </instance>
 <instance part="GND15" gate="1" x="15.24" y="106.68" smashed="yes">
@@ -14892,6 +14907,11 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <instance part="SJ5" gate="G$1" x="5.08" y="149.86" rot="R180"/>
 <instance part="S1" gate="BEF1" x="53.34" y="86.36" rot="R270"/>
 <instance part="P+5" gate="1" x="71.12" y="91.44"/>
+<instance part="GND" gate="G$1" x="119.38" y="162.56" smashed="yes">
+<attribute name="NAME" x="120.65" y="163.83" size="1.778" layer="95" rot="R90"/>
+<attribute name="TP_SIGNAL_NAME" x="120.65" y="161.29" size="1.778" layer="97"/>
+</instance>
+<instance part="GND16" gate="1" x="119.38" y="157.48"/>
 </instances>
 <busses>
 </busses>
@@ -15022,14 +15042,18 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="177.8" y1="114.3" x2="177.8" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SJ3" gate="1" pin="1"/>
+<pinref part="GPIO2_GND" gate="1" pin="1"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="236.22" y1="99.06" x2="236.22" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SJ4" gate="1" pin="1"/>
+<pinref part="SMPS_GND" gate="1" pin="1"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="15.24" y1="109.22" x2="15.24" y2="111.76" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND" gate="G$1" pin="TP"/>
+<pinref part="GND16" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -15070,7 +15094,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <wire x1="228.6" y1="132.08" x2="228.6" y2="114.3" width="0.1524" layer="91"/>
 <junction x="210.82" y="132.08"/>
 <pinref part="I2C_OLED" gate="G$1" pin="4"/>
-<pinref part="SJ3" gate="1" pin="2"/>
+<pinref part="GPIO2_GND" gate="1" pin="2"/>
 <wire x1="228.6" y1="114.3" x2="236.22" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="236.22" y1="114.3" x2="236.22" y2="109.22" width="0.1524" layer="91"/>
 <junction x="228.6" y="114.3"/>
@@ -15322,7 +15346,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <pinref part="R10" gate="G$1" pin="1"/>
 <junction x="25.4" y="121.92"/>
 <junction x="38.1" y="121.92"/>
-<pinref part="SJ4" gate="1" pin="2"/>
+<pinref part="SMPS_GND" gate="1" pin="2"/>
 </segment>
 </net>
 <net name="TPS_EN" class="0">
@@ -15340,7 +15364,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <label x="20.32" y="139.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SJ2" gate="1" pin="2"/>
+<pinref part="TPS_EN" gate="1" pin="2"/>
 <wire x1="243.84" y1="121.92" x2="251.46" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="251.46" y1="121.92" x2="251.46" y2="134.62" width="0.1524" layer="91"/>
 <label x="251.46" y="134.62" size="1.778" layer="95"/>
@@ -15361,7 +15385,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <label x="167.64" y="63.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SJ1" gate="1" pin="1"/>
+<pinref part="CHARGER_STATUS" gate="1" pin="1"/>
 <wire x1="165.1" y1="111.76" x2="162.56" y2="111.76" width="0.1524" layer="91"/>
 <label x="162.56" y="104.14" size="1.778" layer="95" rot="R180"/>
 <wire x1="162.56" y1="111.76" x2="162.56" y2="104.14" width="0.1524" layer="91"/>
@@ -15399,7 +15423,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="SJ1" gate="1" pin="2"/>
+<pinref part="CHARGER_STATUS" gate="1" pin="2"/>
 <pinref part="U$2" gate="G$1" pin="GPIO13"/>
 <wire x1="175.26" y1="111.76" x2="190.5" y2="111.76" width="0.1524" layer="91"/>
 </segment>
@@ -15424,7 +15448,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <net name="N$5" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="GPIO4"/>
-<pinref part="SJ2" gate="1" pin="1"/>
+<pinref part="TPS_EN" gate="1" pin="1"/>
 <wire x1="223.52" y1="121.92" x2="233.68" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
