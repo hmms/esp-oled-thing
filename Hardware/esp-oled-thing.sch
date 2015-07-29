@@ -13123,6 +13123,25 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="102,1,48.26,134.62,GND,GND1,,,,"/>
+<approved hash="102,1,48.26,132.08,PAD,GND,,,,"/>
+<approved hash="102,1,48.26,129.54,PAD,GND,,,,"/>
+<approved hash="102,1,48.26,127,PAD,GND,,,,"/>
+<approved hash="102,1,83.82,129.54,PAD,GND,,,,"/>
+<approved hash="102,1,83.82,132.08,PAD,GND,,,,"/>
+<approved hash="102,1,83.82,134.62,PGND,GND,,,,"/>
+<approved hash="201,1,48.26,134.62,GND,GND\, GND1,,,,"/>
+<approved hash="104,1,170.18,81.28,U1,VIN,5VIN,,,"/>
+<approved hash="104,1,190.5,81.28,U1,VBAT,VBATT,,,"/>
+<approved hash="104,1,190.5,76.2,U1,VSS,GND,,,"/>
+<approved hash="115,1,236.897,154.745,UART,,,,,"/>
+<approved hash="115,1,98.3827,167.835,JP6,,,,,"/>
+<approved hash="115,1,154.94,159.631,BOOTL,,,,,"/>
+<approved hash="115,1,154.94,170.256,RST,,,,,"/>
+<approved hash="115,1,208.475,153.077,I2C_OLED,,,,,"/>
+<approved hash="115,1,6.0169,149.86,SJ5,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
