@@ -187,6 +187,7 @@
 <wire x1="45.293278125" y1="5.71754375" x2="45.732696875" y2="5.278125" width="0.254" layer="121"/>
 <wire x1="45.20945625" y1="5.6743625" x2="45.20945625" y2="5.65658125" width="0.254" layer="121"/>
 <wire x1="45.20945625" y1="5.65658125" x2="44.85131875" y2="5.29844375" width="0.254" layer="121"/>
+<text x="4.953" y="1.9431" size="0.8128" layer="1" font="vector">V2</text>
 </plain>
 <libraries>
 <library name="esp8266modules">
@@ -1879,12 +1880,12 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="19.281" y="4.852" size="0.4064" layer="28" rot="MR180"/>
 </element>
 <element name="R1" library="adafruit" package="M0805" value="4.7K" x="11.77" y="13.31" locked="yes" smashed="yes" rot="MR270">
-<attribute name="NAME" x="10.474" y="16.654" size="1.27" layer="26" rot="MR180"/>
-<attribute name="VALUE" x="12.844" y="12.174" size="0.8128" layer="28" rot="MR90"/>
+<attribute name="NAME" x="10.36478125" y="10.9644" size="1.27" layer="26" rot="MR180"/>
+<attribute name="VALUE" x="11.043140625" y="15.630940625" size="0.8128" layer="28" rot="MR90"/>
 </element>
 <element name="R2" library="adafruit" package="M0805" value="4.7K" x="14.67" y="13.39" locked="yes" smashed="yes" rot="MR270">
-<attribute name="NAME" x="13.494" y="16.754" size="1.27" layer="26" rot="MR180"/>
-<attribute name="VALUE" x="16.856" y="14.506" size="0.8128" layer="28" rot="MR270"/>
+<attribute name="NAME" x="13.841978125" y="11.039" size="1.27" layer="26" rot="MR180"/>
+<attribute name="VALUE" x="13.5579625" y="15.51171875" size="0.8128" layer="28" rot="MR90"/>
 </element>
 <element name="U$2" library="esp8266modules" package="ESP12" value="ESP12" x="7.89" y="13.97" locked="yes" smashed="yes" rot="R90">
 <attribute name="VALUE" x="8.29" y="10.87" size="1.4224" layer="27" rot="R90"/>
@@ -1892,12 +1893,12 @@ Please make sure your boards conform to these design rules.</description>
 </element>
 <element name="RST" library="SparkFun" package="TACTILE_SWITCH_SMD" value="" x="7.70968125" y="2.752859375" rot="MR0"/>
 <element name="R3" library="adafruit" package="M0805" value="100E" x="3.95" y="13.43" locked="yes" smashed="yes" rot="MR270">
-<attribute name="NAME" x="2.754" y="16.534" size="1.27" layer="26" rot="MR180"/>
-<attribute name="VALUE" x="2.936" y="14.646" size="0.8128" layer="28" rot="MR270"/>
+<attribute name="NAME" x="3.3059375" y="15.57338125" size="1.27" layer="26" rot="MR90"/>
+<attribute name="VALUE" x="2.76581875" y="14.463121875" size="0.8128" layer="28" rot="MR270"/>
 </element>
 <element name="R4" library="adafruit" package="M0805" value="100E" x="6.87" y="13.35" locked="yes" smashed="yes" rot="MR270">
-<attribute name="NAME" x="5.634" y="16.654" size="1.27" layer="26" rot="MR180"/>
-<attribute name="VALUE" x="5.856" y="14.566" size="0.8128" layer="28" rot="MR270"/>
+<attribute name="NAME" x="6.426978125" y="15.583178125" size="1.27" layer="26" rot="MR90"/>
+<attribute name="VALUE" x="9.191021875" y="14.733640625" size="0.8128" layer="28" rot="MR270"/>
 </element>
 <element name="I2C_OLED" library="SparkFun" package="1X04" value="" x="11.124" y="24.738" smashed="yes">
 <attribute name="NAME" x="13.3732" y="22.743659375" size="0.4064" layer="25" ratio="10"/>
@@ -2409,8 +2410,8 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="27.18561875" y1="2.6543" x2="32.3723" y2="2.6543" width="1.016" layer="1"/>
 <wire x1="32.3723" y1="2.6543" x2="35.052" y2="5.334" width="1.016" layer="1"/>
 <wire x1="41.656" y1="10.414" x2="41.656" y2="10.11681875" width="0.6096" layer="1"/>
-<wire x1="41.656" y1="10.11681875" x2="41.0718" y2="9.5504" width="0.6096" layer="1"/>
-<wire x1="41.0718" y1="9.5504" x2="40.035478125" y2="9.5504" width="0.6096" layer="1"/>
+<wire x1="41.656" y1="10.11681875" x2="41.628059375" y2="9.58088125" width="0.6096" layer="1"/>
+<wire x1="41.628059375" y1="9.58088125" x2="40.035478125" y2="9.5504" width="0.6096" layer="1"/>
 <wire x1="41.722" y1="12.162" x2="41.722" y2="10.48" width="0.6096" layer="1"/>
 <wire x1="42.606" y1="23.728" x2="42.606" y2="25.146" width="0.6096" layer="1"/>
 </signal>
@@ -2494,10 +2495,6 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U2" pad="7"/>
 <wire x1="34.798" y1="18.034" x2="34.798" y2="17.993" width="0.254" layer="1"/>
 <wire x1="34.798" y1="17.993" x2="34.79" y2="17.985" width="0.254" layer="1"/>
-<via x="32.004" y="25.146" extent="1-16" drill="0.5"/>
-<wire x1="32.004" y1="21.59" x2="32.004" y2="25.146" width="0.3048" layer="16"/>
-<wire x1="32.004" y1="21.59" x2="32.766" y2="20.828" width="0.3048" layer="16"/>
-<wire x1="32.766" y1="20.828" x2="34.544" y2="20.828" width="0.3048" layer="16"/>
 <via x="34.544" y="20.828" extent="1-16" drill="0.5"/>
 <contactref element="C2" pad="2"/>
 <contactref element="R17" pad="2"/>
@@ -2727,26 +2724,87 @@ Please make sure your boards conform to these design rules.</description>
 </signals>
 <errors>
 <approved hash="18,29,d0044884c0895809"/>
+<approved hash="18,29,10bf3fbe3fb910b8"/>
+<approved hash="18,29,4d11050bd3349b2e"/>
+<approved hash="18,29,7df250aaa75f7e00"/>
+<approved hash="18,29,7517f3e5a8e62d5b"/>
+<approved hash="18,29,7dfbbaf908f06200"/>
+<approved hash="18,29,751defed074ac700"/>
+<approved hash="18,29,e335feda06df1f32"/>
+<approved hash="18,29,c39ef099c499f79e"/>
 <approved hash="18,29,ad12e9bd48be0c11"/>
 <approved hash="18,29,2528f577932ca81e"/>
 <approved hash="18,29,e41ffdf05cf74518"/>
-<approved hash="18,29,e65bb73d0f3d5e5b"/>
 <approved hash="18,29,80f0caf632f678f0"/>
+<approved hash="18,29,e65bb73d0f3d5e5b"/>
 <approved hash="18,29,ce6e79b0f5ed5736"/>
+<approved hash="18,29,0460770d3b0a4867"/>
+<approved hash="18,29,2ae1be8f6e8afae4"/>
+<approved hash="18,29,8a881be81f9c88dc"/>
+<approved hash="18,29,dd68bfcde6c18464"/>
+<approved hash="18,29,da07db0f220f2307"/>
+<approved hash="18,29,abadabbf38bf38ad"/>
+<approved hash="18,29,6732746e8c6e9f32"/>
+<approved hash="18,29,019909a5b1a5b999"/>
+<approved hash="18,29,4c90d0f6a3f93f9f"/>
+<approved hash="18,29,03851566956e838d"/>
+<approved hash="18,29,6e8ca7821483dd8d"/>
+<approved hash="18,29,67c1e21dbb153ec9"/>
+<approved hash="18,29,d60ebc98cfa6a530"/>
+<approved hash="18,29,106eebc7abf85051"/>
+<approved hash="18,29,8fdb85645f520212"/>
+<approved hash="18,29,d395b27498c155c8"/>
+<approved hash="18,29,0cbf0633453e4fb2"/>
+<approved hash="18,29,1ed153955e9613d2"/>
+<approved hash="18,29,e81fa5c9b6cafb1c"/>
+<approved hash="18,29,8e9b717871078ee4"/>
+<approved hash="18,29,ef9ea35bb43ab36a"/>
+<approved hash="18,29,c7cdfb4ca33ef36d"/>
+<approved hash="18,29,f9a51f2277854180"/>
+<approved hash="18,29,587afece6615d6f8"/>
+<approved hash="18,29,aff1e6a7cea787f1"/>
+<approved hash="18,29,2a9cd3b253b2aa9c"/>
+<approved hash="18,30,a2d9a5a28817f196"/>
+<approved hash="18,30,51639bdbee2ae7d3"/>
+<approved hash="18,30,ac9fcbfd0bf76c95"/>
+<approved hash="18,30,60898feb4feca08e"/>
+<approved hash="18,30,248243e083dae4b8"/>
+<approved hash="18,30,f8bc07dec7d038b2"/>
+<approved hash="18,30,bcb6dbd41bce7cac"/>
+<approved hash="18,30,70a09fc25fc7b0a5"/>
+<approved hash="18,30,34d953bb93bdf4df"/>
+<approved hash="18,30,08d317b1d7abc8c9"/>
+<approved hash="18,30,db7fbddd7dd71b75"/>
+<approved hash="18,30,1769f9cb39ccd76e"/>
+<approved hash="18,30,536235c0f5fa9358"/>
+<approved hash="18,30,8f5c71feb1f04f52"/>
+<approved hash="18,30,cb56adf46dee0b4c"/>
+<approved hash="18,30,0740e9e229e7c745"/>
+<approved hash="18,30,4339259be59d833f"/>
+<approved hash="18,30,7f336191a18bbf29"/>
+<approved hash="18,30,d29cd5ca5ef3ef53"/>
+<approved hash="18,30,5a9155dd82e42353"/>
+<approved hash="18,30,d2ad25d6c6ef6752"/>
+<approved hash="18,30,4a9825e80ad19b53"/>
+<approved hash="18,30,434a0b730b043abe"/>
+<approved hash="18,30,fc708c84c08ab07e"/>
+<approved hash="18,30,514fbcdf47533df7"/>
+<approved hash="18,30,a0b5accb1f4c1f32"/>
+<approved hash="18,30,b0fec4281d14dc17"/>
+<approved hash="18,30,2e669620f0934dc3"/>
+<approved hash="18,30,e6f1a8e5a8e6e6f2"/>
 <approved hash="19,1,7c2f0056824dfe34"/>
 <approved hash="19,1,3219a20f7103bfe9"/>
 <approved hash="19,1,126140d9f058df2c"/>
 <approved hash="19,1,ecafbcc0e4f8d0ab"/>
 <approved hash="19,1,492032d430a54b51"/>
 <approved hash="19,1,012208d60aa70353"/>
-<approved hash="19,1,29b5559a090434ee"/>
 <approved hash="19,1,8a6d99727cbb3791"/>
+<approved hash="19,1,29b5559a090434ee"/>
 <approved hash="19,1,fbfc3bc1aed3b508"/>
 <approved hash="19,1,e7a46516caf1dc3c"/>
 <approved hash="19,1,bb80221e98f9c606"/>
 <approved hash="19,1,67696b0775f1eaa9"/>
-<approved hash="5,1,e6bad42c08ce26a2"/>
-<approved hash="5,1,42778f1d917cff20"/>
 <approved hash="5,1,fc9a983acf72eb28"/>
 <approved hash="19,1,dacb579de97ae193"/>
 <approved hash="4,16,88b0737073b58bb2"/>
