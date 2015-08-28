@@ -12328,7 +12328,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="SparkFun" deviceset="VCC" device=""/>
 <part name="D3" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY" device="-BAT20J" value="BAT20J"/>
-<part name="Q1" library="SparkFun-DiscreteSemi" deviceset="MOSFET-PCHANNEL" device="DMG2307L" value="2.5A/30V"/>
+<part name="Q1" library="SparkFun-DiscreteSemi" deviceset="MOSFET-PCHANNEL" device="DMG2307L" value="DMP1045U"/>
 <part name="R12" library="adafruit" deviceset="R-US_" device="M0805" value="10K"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="CHARGER_STATUS" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
@@ -12348,10 +12348,10 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <attribute name="TP_SIGNAL_NAME" value=""/>
 </part>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
-<part name="C1" library="rcl" deviceset="C-US" device="C0805" value="10uF"/>
-<part name="C2" library="rcl" deviceset="C-US" device="C0805" value="0.1uF"/>
-<part name="C7" library="rcl" deviceset="C-US" device="C0805" value="0.1uF"/>
-<part name="C8" library="rcl" deviceset="C-US" device="C0805" value="22uF"/>
+<part name="C1" library="rcl" deviceset="C-US" device="C0805" value="10uF 10V"/>
+<part name="C2" library="rcl" deviceset="C-US" device="C0805" value="0.1uF 10V"/>
+<part name="C7" library="rcl" deviceset="C-US" device="C0805" value="0.1uF 10V"/>
+<part name="C8" library="rcl" deviceset="C-US" device="C0805" value="22uF 10V"/>
 <part name="R5" library="adafruit" deviceset="R-US_" device="M0805" value="10K"/>
 <part name="R17" library="adafruit" deviceset="R-US_" device="M0805" value="220K"/>
 <part name="R19" library="adafruit" deviceset="R-US_" device="M0805" value="2M"/>
@@ -12360,8 +12360,8 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <part name="R22" library="adafruit" deviceset="R-US_" device="M0805" value="1.2M"/>
 <part name="R23" library="adafruit" deviceset="R-US_" device="M0805" value="470E"/>
 <part name="R7" library="adafruit" deviceset="R-US_" device="M0805" value="2K"/>
-<part name="C3" library="rcl" deviceset="C-US" device="C0805" value="4.7uF"/>
-<part name="C4" library="rcl" deviceset="C-US" device="C0805" value="4.7uF"/>
+<part name="C3" library="rcl" deviceset="C-US" device="C0805" value="4.7uF 10V"/>
+<part name="C4" library="rcl" deviceset="C-US" device="C0805" value="4.7uF 10V"/>
 </parts>
 <sheets>
 <sheet>
